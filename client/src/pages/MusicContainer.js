@@ -4,6 +4,7 @@ import Header from './Header'
 import '../index.css';
 import SongsContainer from '../Components/SongsContainer'
 import PlaylistsContainer from './PlaylistsContainer';
+import Grid from '@mui/material/Grid';
 
 function MusicContainer() {
   const [songs, setSongs] = useState([])
@@ -107,9 +108,9 @@ function MusicContainer() {
     <div>
 
       
-      <div>
+      <Grid container spacing={2}>
         <SongsContainer addToPlaylists={addToPlaylists} playlists={playlists} songs={songs} /> 
-        </div>
+      </Grid>
         
         <div>
         <PlaylistsContainer
